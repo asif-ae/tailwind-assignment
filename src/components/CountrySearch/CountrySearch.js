@@ -21,7 +21,7 @@ const CountrySearch = () => {
     <Fragment>
       <div className="p-4">
         <div className="w-full md:w-1/2 mx-auto p-1">
-          <input type="text" name="Search" id="search" className="w-full mx-auto p-2" onChange={onChangeFunction} placeholder="Search..." />
+          <input type="text" name="Search" id="search" className="w-full mx-auto py-2 px-3 border focus:border-blue-900 rounded text-blue-900 text-lg outline-none" onChange={onChangeFunction} placeholder="Search by country name..." />
         </div>
       </div>
       <div className="p-4">
@@ -30,6 +30,9 @@ const CountrySearch = () => {
             countryInfo.status !== 404 && countryInfo.map(info => <CountryCard info={info} key={info.name} />)
           }
         </div>
+        {
+          countryInfo.status === 404 && <h3 className="text-red-500 text-center text-xl">Your search doesn't match with any country name!</h3>
+        }
       </div>
     </Fragment>
   );
