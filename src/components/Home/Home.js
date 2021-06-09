@@ -1,10 +1,14 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
+import CountrySearch from '../CountrySearch/CountrySearch';
+import Header from '../Header/Header';
 
 const Home = () => {
   return (
-    <div>
-      <Navbar></Navbar>
+    <div className="font-serif">
+      <Header></Header>
+      <div className="xl:container mx-auto">
+        <CountrySearch />
+      </div>
     </div>
   );
 };
