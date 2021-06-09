@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import { Fragment } from 'react';
+import Player from 'react-soundcloud-player'
+import Home from './components/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Router>
+        <Switch>
+          <Route path='/'>
+            <Home></Home>
+          </Route>
+        </Switch>
+      </Router>
+      <Player
+        client_id="c5a171200f3a0a73a523bba14a1e0a29"
+        audio_id="npm install react-router-dom"
+        title="Easyfun - Fanta"
+      />
+    </Fragment>
   );
 }
 
