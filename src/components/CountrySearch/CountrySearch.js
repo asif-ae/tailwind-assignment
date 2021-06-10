@@ -20,6 +20,9 @@ const CountrySearch = () => {
   return (
     <Fragment>
       <div className="p-4">
+        <h3 className="text-2xl text-blue-900 uppercase px-3 text-center">
+          Search By Country Name
+        </h3>
         <div className="w-full md:w-1/2 mx-auto p-1">
           <input type="text" name="Search" id="search" className="w-full mx-auto py-2 px-3 border focus:border-blue-900 rounded text-blue-900 text-lg outline-none" onChange={onChangeFunction} placeholder="Search by country name..." />
         </div>

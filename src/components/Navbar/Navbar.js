@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const navigation = [
-    { name: 'Dashboard', href: '/', current: false },
-    // { name: 'Team', href: '/', current: false },
+    { name: 'Home', href: '/', current: false },
+    { name: 'Name', href: '/', current: false },
     // { name: 'Projects', href: '/', current: false },
     // { name: 'Calendar', href: '/', current: false },
   ]
@@ -40,7 +40,7 @@ const NavBar = () => {
                       src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                       alt="Workflow"
                     />
-                    <div className="hidden lg:block h-8 w-auto">
+                    <div className="hidden lg:block h-8 w-auto flex items-center text-white">
                       <img
                         className="hidden lg:block h-8 w-auto"
                         src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
@@ -55,7 +55,7 @@ const NavBar = () => {
                           key={item.name}
                           to={item.href}
                           className={classNames(
-                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            item.current ? 'bg-gray-900 text-white uppercase' : 'text-gray-300 hover:bg-gray-700 hover:text-white uppercase',
                             'px-3 py-2 rounded-md text-sm font-medium'
                           )}
                           aria-current={item.current ? 'page' : undefined}
@@ -159,7 +159,7 @@ const NavBar = () => {
                     key={item.name}
                     to={item.href}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                      item.current ? 'bg-gray-900 text-white uppercase' : 'text-gray-300 hover:bg-gray-700 hover:text-white uppercase',
                       'block px-3 py-2 rounded-md text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}
